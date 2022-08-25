@@ -51,11 +51,7 @@ public class App {
         priest.strength = 10;
         priest.agility = 10;
         priest.intelligence = 10;
-        priest.bodycount = 99.9F;
         priest.name = "Father Dhanaso";
-        priest.pp = "Big pp";
-        priest.trait = "Predator";
-        priest.middleinitial = 'O';
         priest.sayMyName();
         priest.sayMyStrength();
         priest.sayMyAgility();
