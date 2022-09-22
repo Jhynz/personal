@@ -33,6 +33,7 @@ public class App {
         System.out.print("Enter your choice: ");
         String Size = scan.nextLine();
 
+        scan.nextLine();
 
         System.out.println("Enter the amount of pizza that you want!");
 
@@ -71,7 +72,7 @@ public class App {
                 return;
         }
 
-        switch (Size){
+        switch (Size) {
             case "Medium":
                 size = "12 inch";
                 break;
