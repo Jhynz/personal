@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class App {
-    
+
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -9,6 +9,11 @@ public class App {
     }
 
     static void myOrder() {
+
+        String pizza = "";
+        double price = 0;
+        String typeofcrust = "";
+        String size = "";
 
         System.out.println("Welcome to Angels Pizza!");
 
@@ -18,33 +23,6 @@ public class App {
 
         System.out.print("Enter your choice here: ");
         char choice = scan.next().charAt(0);
-
-        System.out.println("Enter letter T if you want a Thick Crust!");
-        System.out.println("Enter letter t if you want a Thin Crust!");
-
-        System.out.print("Enter your choice: ");
-        char Crust = scan.next().charAt(0);
-
-
-        System.out.println("Enter letter Medium if you want a 12 inch pizza!");
-        System.out.println("Enter letter Family if you want a 18 inch pizaa!");
-        System.out.println("Enter letter Big-Family if you want a 24 inch sized pizaa!");
-
-        System.out.print("Enter your choice: ");
-        String Size = scan.nextLine();
-
-        scan.nextLine();
-
-        System.out.println("Enter the amount of pizza that you want!");
-
-        System.out.println("Enter amount: ");
-        scan.nextInt();
-
-        String pizza = "";
-        double price = 0;
-        String typeofcrust = "";
-        String size = "";
-        int quantity = 0;
 
         switch (choice) {
             case 'A':
@@ -60,17 +38,30 @@ public class App {
                 return;
         }
 
+        System.out.println("Enter letter T if you want a Thick Crust!");
+        System.out.println("Enter letter t if you want a Thin Crust!");
+
+        System.out.print("Enter your choice: ");
+        char Crust = scan.next().charAt(0);
+
         switch (Crust) {
             case 'T':
                 typeofcrust = "Thick Crust";
                 break;
             case 't':
-                typeofcrust = "Thin Crust";    
+                typeofcrust = "Thin Crust";
                 break;
             default:
                 System.out.println("Please enter T or t!");
                 return;
         }
+
+        System.out.println("Enter letter Medium if you want a 12 inch pizza!");
+        System.out.println("Enter letter Family if you want a 18 inch pizaa!");
+        System.out.println("Enter letter Big-Family if you want a 24 inch sized pizaa!");
+
+        System.out.print("Enter your choice: ");
+        String Size = scan.next();
 
         switch (Size) {
             case "Medium":
@@ -84,17 +75,20 @@ public class App {
                 break;
             default:
                 System.out.println("Please enter a valid size!");
-                return; 
+                return;
         }
 
+        System.out.println("Enter how many pizza that you want!");
+        System.out.println("Enter quantity: ");
+        int quantity = scan.nextInt();
 
+        double totalPrice = price * quantity;
 
         System.out.println("Your order is: " + pizza);
         System.out.println("Your total amount is: " + price);
         System.out.println("Crust: " + typeofcrust);
         System.out.println("Size: " + size);
-        System.out.println("Quantity: " + quantity);
-
+        System.out.println("Quantity: " + totalPrice);
         scan.close();
     }
 }
