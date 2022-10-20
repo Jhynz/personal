@@ -3,13 +3,24 @@ public class App {
         
         char[][] alphabet = {
             {'A', 'B', 'C'},
-            {'D', 'E', 'F'},
-            {'G', 'H', 'I'}};
+            {'D', 'I', 'F'},
+            {'G', 'H', 'I'},
+            {'J', 'K', 'L'},
+            {'M', 'N', 'O'}};
 
-        for (int rows = 0; rows < 3; rows++){
-            System.out.println("");
-            for (int columns = 0; columns < 3; columns++){
-                System.out.print(alphabet[rows][columns]);
+
+            // System.out.println(alphabet.length - 1);
+
+        for (int rows = 0; rows < alphabet.length; rows++){
+                System.out.println("");
+                    for (int columns = 0; columns < alphabet[columns].length; columns++){
+                        if(rows % 2 == 0 && columns % 2 == 0){
+                            System.out.print(alphabet[rows][columns]);                     
+                        }   else if (!(rows % 2 == 0)&& (!(columns % 2 == 0))){
+                            System.out.print(alphabet[rows][columns]);
+                        }   else {
+                            System.out.print(" ");
+                        }
         };
     }
         // System.out.println(alphabet[1][1]);
